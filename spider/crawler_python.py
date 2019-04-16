@@ -45,6 +45,8 @@ def down_bt(bt_path, down_path):
     with open(down_path, 'wb') as f:
         for chunk in bt_data.iter_content(100000):
             f.write(chunk)
+        else:
+            print('下载完成!')
 
 
 if __name__ == '__main__':
