@@ -6,8 +6,8 @@ import os
 
 # 设置固定变量
 # 固定的网页地址
-path = "F:\learn in blackhorse\就业班"
-url = 'http://python20.top'
+path = r"F:\learn in blackhorse\就业班"
+url = r'http://python20.top'
 
 
 def main():
@@ -32,11 +32,13 @@ def main():
         down_path = os.path.join(path, bt_list[-1])
         if not os.path.exists(down_path):
             down_bt(bt_path, down_path)
+        else:
+            print(bt_list[-1], ':已下载')
 
 
 def down_bt(bt_path, down_path):
     bt_url = url + bt_path
-    print('开始下载文件',bt_path)
+    print('开始下载文件', bt_path)
     bt_data = rq.get(bt_url)
 
     # 不知道什么作用的代码

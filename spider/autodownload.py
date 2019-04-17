@@ -4,7 +4,6 @@
 import os
 import time
 import urllib
-import easygui as ui
 
 
 def make_dirs(path):
